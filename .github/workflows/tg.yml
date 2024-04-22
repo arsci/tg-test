@@ -13,13 +13,16 @@ jobs:
   run:
     runs-on: ubuntu-latest
     steps:
-
       - name: 'Checkout'
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
           submodules: true
-
+      - name: run
+        run: |
+          echo $PATH
+          pwd
+          which mise
       - name: Plan
         uses: gruntwork-io/terragrunt-action@SME-228/LIB-70/opentofu-mise-tg-action
         env:
