@@ -1,0 +1,33 @@
+name: 'tg-run-all'
+
+on:
+  workflow_dispatch:
+
+env:
+  tf_version: "1.5.1"
+  tg_version: "0.55.21"
+  working_dir: "run-all"
+
+jobs:
+
+  run:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: 'Checkout'
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          submodules: true
+
+      - name: Plan
+        uses: gruntwork-io/terragrunt-action@SME-228/LIB-70/opentofu-mise-tg-action
+        env:
+          TRACE: "1"
+          TERRAGRUNT_NON_INTERACTIVE: "true"
+          INPUT_PRE_EXEC_1: "env"
+        with:
+          tf_version: ${{ env.tf_version }}
+          tg_version: ${{ env.tg_version }}
+          tg_dir: "${{ env.working_dir }}"
+          tg_command: run-all plan
