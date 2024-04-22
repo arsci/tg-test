@@ -18,10 +18,6 @@ jobs:
         with:
           fetch-depth: 0
           submodules: true
-      - name: run
-        run: |
-          echo $PATH
-          pwd
       - name: Plan
         uses: gruntwork-io/terragrunt-action@SME-228/LIB-70/opentofu-mise-tg-action
         env:
