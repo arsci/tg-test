@@ -22,7 +22,6 @@ jobs:
         run: |
           echo $PATH
           pwd
-          which mise
       - name: Plan
         uses: gruntwork-io/terragrunt-action@SME-228/LIB-70/opentofu-mise-tg-action
         env:
