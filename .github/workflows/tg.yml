@@ -5,7 +5,7 @@ on:
 
 env:
   tofu_version: "1.6.0"
-  tg_version: "0.52.5"
+  tg_version: "0.45.18"
   working_dir: "run-all"
 
 jobs:
