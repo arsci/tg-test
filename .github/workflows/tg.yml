@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 env:
-  tf_version: "1.6.0"
+  tofu_version: "1.6.0"
   tg_version: "0.57.9"
   working_dir: "run-all"
 
@@ -25,7 +25,7 @@ jobs:
           TERRAGRUNT_NON_INTERACTIVE: "true"
           INPUT_PRE_EXEC_1: "env"
         with:
-          tf_version: ${{ env.tf_version }}
+          tofu_version: ${{ env.tofu_version }}
           tg_version: ${{ env.tg_version }}
           tg_dir: "${{ env.working_dir }}"
           tg_command: run-all plan
