@@ -14,12 +14,12 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: 'Checkout'
-        uses: actions/checkout@v2.0.2
+        uses: actions/checkout@v2
         with:
           fetch-depth: 0
           submodules: true
       - name: Plan
-        uses: gruntwork-io/terragrunt-action@v2
+        uses: gruntwork-io/terragrunt-action@v2.0.2
         env:
           TRACE: "1"
           TERRAGRUNT_NON_INTERACTIVE: "true"
