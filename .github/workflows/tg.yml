@@ -19,7 +19,7 @@ jobs:
           fetch-depth: 0
           submodules: true
       - name: Plan
-        uses: gruntwork-io/terragrunt-action@v2.0.2
+        uses: gruntwork-io/terragrunt-action@SME-532/fix-runner
         env:
           TRACE: "1"
           TERRAGRUNT_NON_INTERACTIVE: "true"
