@@ -19,7 +19,7 @@ jobs:
           fetch-depth: 0
           submodules: true
       - name: Plan
-        uses: gruntwork-io/terragrunt-action
+        uses: gruntwork-io/terragrunt-action@main
         env:
           TRACE: "1"
           TERRAGRUNT_NON_INTERACTIVE: "true"
