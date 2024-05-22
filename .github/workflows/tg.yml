@@ -9,6 +9,18 @@ env:
   working_dir: "run-all/app1"
 
 jobs:
+  check_directory:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set execute permissions
+        run: chmod +x /home/runner/work/_temp/_github_workflow
+      - name: check directory
+        run: ls -la /home/runner/work/_temp/_github_workflow/
+      - name: who
+        run: |
+          whoami
+          echo "User: $(id -nu $UID)"
+          echo "GID: $GID"
   plan:
     runs-on: ubuntu-latest
     steps:
