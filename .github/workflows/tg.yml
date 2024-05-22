@@ -19,6 +19,10 @@ jobs:
           submodules: true
       - name: Plan
         uses: gruntwork-io/terragrunt-action@v2.1.3
+        env:
+          TRACE: "1"
+          TERRAGRUNT_NON_INTERACTIVE: "true"
+          INPUT_PRE_EXEC_1: "env"
         with:
           tf_version: ${{ env.tf_version }}
           tg_version: ${{ env.tg_version }}
