@@ -4,8 +4,8 @@ on:
   workflow_dispatch:
 
 env:
-  tofu_version: "1.6.0"
-  tg_version: "0.57.9"
+  tf_version: '1.5.7'
+  tg_version: '0.53.2'
   working_dir: "run-all"
 
 jobs:
