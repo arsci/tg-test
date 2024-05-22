@@ -6,7 +6,7 @@ on:
 env:
   tf_version: "1.6.0"
   tg_version: "0.57.9"
-  working_dir: "run-all"
+  working_dir: "run-all/app1"
 
 jobs:
   plan:
