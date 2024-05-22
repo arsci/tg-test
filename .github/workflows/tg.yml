@@ -29,4 +29,4 @@ jobs:
           tg_version: ${{ env.tg_version }}
           tg_dir: "${{ env.working_dir }}"
           tg_command: 'run-all apply'
-          tg_add_approve: 1
+          tg_add_approve: 0
