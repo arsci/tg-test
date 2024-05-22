@@ -19,7 +19,7 @@ jobs:
           fetch-depth: 0
           submodules: true
       - name: Plan
-        uses: gruntwork-io/terragrunt-action@SME-532/fix-runner
+        uses: gruntwork-io/terragrunt-action@v2.1.3
         env:
           TRACE: "1"
           TERRAGRUNT_NON_INTERACTIVE: "true"
@@ -29,3 +29,4 @@ jobs:
           tg_version: ${{ env.tg_version }}
           tg_dir: "${{ env.working_dir }}"
           tg_command: run-all plan
+          tg_add_approve: 0
